@@ -21,6 +21,9 @@ public class Faculty {
 	@Column(name="last_name")
 	private String lastName;
 
+	@Column(name="Title")
+	private String title;
+
 	@Column(name="email")
 	private String email;
 	
@@ -29,10 +32,11 @@ public class Faculty {
 		
 	}
 	
-	public Faculty(int id, String firstName, String lastName, String email) {
+	public Faculty(int id, String firstName, String lastName, String title, String email) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.title = title;
 		this.email = email;
 	}
 
@@ -61,6 +65,14 @@ public class Faculty {
 		this.lastName = lastName;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -72,6 +84,6 @@ public class Faculty {
 	// toString method
 	@Override
 	public String toString() {
-		return "Faculty [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Faculty [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", title=" + title + ", email=" + email + "]";
 	}	
 }
